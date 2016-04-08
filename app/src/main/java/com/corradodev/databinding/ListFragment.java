@@ -62,7 +62,7 @@ public class ListFragment extends Fragment {
     locationCall.enqueue(new Callback<List<Location>>() {
       @Override
       public void onResponse(Call<List<Location>> call, Response<List<Location>> response) {
-//        EventBus.getDefault().post(new CompleteEvent(response.body()));
+        EventBus.getDefault().post(new CompleteEvent(response.body()));
       }
 
       @Override
